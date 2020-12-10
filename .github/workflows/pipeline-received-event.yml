@@ -1,0 +1,19 @@
+name: Actualizar imagen
+
+on:
+  repository_dispatch:
+    types: prueba-a
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Recibe
+        run: |
+          echo "Soy la alternativa"
+          echo ${{ github.event.client_payload.servicio }}
+          echo ${{ github.event.client_payload.entorno }}
+          echo ${{ github.event.client_payload.actor }}
+
