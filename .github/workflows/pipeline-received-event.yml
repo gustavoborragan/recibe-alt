@@ -2,7 +2,7 @@ name: Actualizar imagen
 
 on:
   repository_dispatch:
-    types: prueba-a
+    types: prueba-b
 
 jobs:
   build:
